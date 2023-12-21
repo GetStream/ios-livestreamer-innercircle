@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4AEA251A2B27B374009C8EA4 /* ios_livestreamer_innercircleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA25192B27B374009C8EA4 /* ios_livestreamer_innercircleApp.swift */; };
-		4AEA251C2B27B374009C8EA4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA251B2B27B374009C8EA4 /* ContentView.swift */; };
+		4AEA251C2B27B374009C8EA4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA251B2B27B374009C8EA4 /* HomeView.swift */; };
 		4AEA251E2B27B376009C8EA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AEA251D2B27B376009C8EA4 /* Assets.xcassets */; };
 		4AEA25212B27B376009C8EA4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AEA25202B27B376009C8EA4 /* Preview Assets.xcassets */; };
 		FFD130BA2B34EBCF003A732F /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD130B92B34EBCF003A732F /* AuthenticationView.swift */; };
@@ -17,7 +17,7 @@
 /* Begin PBXFileReference section */
 		4AEA25162B27B374009C8EA4 /* ios-livestreamer-innercircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-livestreamer-innercircle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AEA25192B27B374009C8EA4 /* ios_livestreamer_innercircleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_livestreamer_innercircleApp.swift; sourceTree = "<group>"; };
-		4AEA251B2B27B374009C8EA4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4AEA251B2B27B374009C8EA4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4AEA251D2B27B376009C8EA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AEA25202B27B376009C8EA4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FFD130B92B34EBCF003A732F /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				4AEA25192B27B374009C8EA4 /* ios_livestreamer_innercircleApp.swift */,
-				4AEA251B2B27B374009C8EA4 /* ContentView.swift */,
+				4AEA251B2B27B374009C8EA4 /* HomeView.swift */,
 				FFD130B92B34EBCF003A732F /* AuthenticationView.swift */,
 				4AEA251D2B27B376009C8EA4 /* Assets.xcassets */,
 				4AEA251F2B27B376009C8EA4 /* Preview Content */,
@@ -140,7 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AEA251C2B27B374009C8EA4 /* ContentView.swift in Sources */,
+				4AEA251C2B27B374009C8EA4 /* HomeView.swift in Sources */,
 				4AEA251A2B27B374009C8EA4 /* ios_livestreamer_innercircleApp.swift in Sources */,
 				FFD130BA2B34EBCF003A732F /* AuthenticationView.swift in Sources */,
 			);

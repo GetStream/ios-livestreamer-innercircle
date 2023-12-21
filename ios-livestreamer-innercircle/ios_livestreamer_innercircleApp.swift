@@ -11,7 +11,7 @@ import SwiftUI
 struct ios_livestreamer_innercircleApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
         }
     }
 }
