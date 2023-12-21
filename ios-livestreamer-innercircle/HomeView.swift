@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @State private var isPresentingAuthenticationView = false
+    @State private var isPresentingProfileView = false
     
     private let livestreams = ["video 1", "video 2", "video 3"]
     
@@ -31,14 +31,14 @@ struct HomeView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        isPresentingAuthenticationView = true
+                        isPresentingProfileView = true
                     } label: {
                         Label("Profile", systemImage: "person.circle")
                     }
                 }
             }
-            .sheet(isPresented: $isPresentingAuthenticationView) {
-                AuthenticationView()
+            .sheet(isPresented: $isPresentingProfileView) {
+                ProfileView()
             }
         }
     }
