@@ -12,6 +12,7 @@
 		4AEA251E2B27B376009C8EA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AEA251D2B27B376009C8EA4 /* Assets.xcassets */; };
 		4AEA25212B27B376009C8EA4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AEA25202B27B376009C8EA4 /* Preview Assets.xcassets */; };
 		FFD130BA2B34EBCF003A732F /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD130B92B34EBCF003A732F /* AuthenticationView.swift */; };
+		FFD130BC2B34F09D003A732F /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD130BB2B34F09D003A732F /* PaywallView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		4AEA251D2B27B376009C8EA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AEA25202B27B376009C8EA4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FFD130B92B34EBCF003A732F /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		FFD130BB2B34F09D003A732F /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				4AEA25192B27B374009C8EA4 /* ios_livestreamer_innercircleApp.swift */,
 				4AEA251B2B27B374009C8EA4 /* HomeView.swift */,
 				FFD130B92B34EBCF003A732F /* AuthenticationView.swift */,
+				FFD130BB2B34F09D003A732F /* PaywallView.swift */,
 				4AEA251D2B27B376009C8EA4 /* Assets.xcassets */,
 				4AEA251F2B27B376009C8EA4 /* Preview Content */,
 			);
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AEA251C2B27B374009C8EA4 /* HomeView.swift in Sources */,
+				FFD130BC2B34F09D003A732F /* PaywallView.swift in Sources */,
 				4AEA251A2B27B374009C8EA4 /* ios_livestreamer_innercircleApp.swift in Sources */,
 				FFD130BA2B34EBCF003A732F /* AuthenticationView.swift in Sources */,
 			);
