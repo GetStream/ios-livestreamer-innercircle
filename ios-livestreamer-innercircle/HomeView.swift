@@ -8,14 +8,25 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    let livestreams = ["video 1", "video 2", "video 3"]
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            List {
+                ForEach(livestreams, id: \.self) { video in
+                    VStack(alignment: .leading) {
+                        RoundedRectangle(cornerRadius: 12)
+                            .frame(width: .infinity, height: 300)
+                        
+                        Text(video)
+                            .font(.title)
+                    }
+                    
+                }
+            }
+            .listStyle(.plain)
         }
-        .padding()
     }
 }
 
