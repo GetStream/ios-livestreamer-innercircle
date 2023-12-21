@@ -9,7 +9,9 @@ import SwiftUI
 
 struct HomeView: View {
     
-    let livestreams = ["video 1", "video 2", "video 3"]
+    @State private var isPresentingAuthenticationView = false
+    
+    private let livestreams = ["video 1", "video 2", "video 3"]
     
     var body: some View {
         NavigationStack {
@@ -26,6 +28,18 @@ struct HomeView: View {
                 }
             }
             .listStyle(.plain)
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        isPresentingAuthenticationView = true
+                    } label: {
+                        Label("Profile", systemImage: "person.circle")
+                    }
+                }
+            }
+            .sheet(isPresented: $isPresentingAuthenticationView) {
+                AuthenticationView()
+            }
         }
     }
 }
