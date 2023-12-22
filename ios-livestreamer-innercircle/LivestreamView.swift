@@ -12,7 +12,6 @@ struct LivestreamView: View {
     let reactionButtonSize: CGFloat = 60
     
     var body: some View {
-        NavigationStack {
             VStack(alignment: .leading, spacing: 16) {
                 Rectangle()
                     .frame(width: .infinity, height: 320)
@@ -78,10 +77,11 @@ struct LivestreamView: View {
                     }
                 }
             }
-        }
     }
 }
 
 #Preview {
-    LivestreamView()
+    NavigationStack {
+        LivestreamView()
+    }
 }
