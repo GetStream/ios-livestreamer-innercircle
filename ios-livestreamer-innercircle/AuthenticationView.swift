@@ -14,37 +14,44 @@ struct AuthenticationView: View {
     @State private var password = ""
     
     var body: some View {
-        Form {
-            Section {
-                TextField("Username", text: $username)
-            } header: {
-                Text("Username")
-            }
-            
-            Section {
-                TextField("Email", text: $email)
-            } header: {
-                Text("Email")
-            }
-            
-            Section {
-                SecureField("Password", text: $password)
-            } header: {
-                Text("Password")
-            } footer: {
-                HStack {
-                    Spacer()
-                    
-                    Button {
+        NavigationStack {
+            Form {
+                Section {
+                    TextField("Username", text: $username)
+                } header: {
+                    Text("Username")
+                }
+                
+                Section {
+                    TextField("Email", text: $email)
+                } header: {
+                    Text("Email")
+                }
+                
+                Section {
+                    SecureField("Password", text: $password)
+                } header: {
+                    Text("Password")
+                } footer: {
+                    HStack {
+                        Spacer()
                         
-                    } label: {
-                        Text("Create Account")
-                            .frame(width: .infinity)
+                        Button {
+                            
+                        } label: {
+                            Text("Create Account")
+                                .frame(width: .infinity)
+                        }
+                        .buttonStyle(.borderedProminent)
+                        .padding(.top, 50)
+                        
+                        Spacer()
                     }
-                    .buttonStyle(.borderedProminent)
-                    .padding(.top, 50)
-                    
-                    Spacer()
+                }
+            }
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Label("close", systemImage: "xmark.circle")
                 }
             }
         }
