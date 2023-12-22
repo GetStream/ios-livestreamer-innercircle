@@ -33,20 +33,21 @@ struct AuthenticationView: View {
                 } header: {
                     Text("Password")
                 } footer: {
-                    HStack {
-                        Spacer()
+                    Button {
                         
-                        Button {
-                            
-                        } label: {
-                            Text("Create Account")
-                                .frame(width: .infinity)
-                        }
-                        .buttonStyle(.borderedProminent)
-                        .padding(.top, 50)
-                        
-                        Spacer()
+                    } label: {
+                        Text("Create Account")
+                            .padding(.vertical, 8)
+                            .padding(.horizontal, 16)
+                            .foregroundStyle(.white)
+                            .fontWeight(.bold)
+                            .frame(maxWidth: .infinity, minHeight: 44)
                     }
+                    .background {
+                        Color.blue
+                    }
+                    .clipShape(Capsule())
+                    .padding(.top, 16)
                 }
             }
             .toolbar {
