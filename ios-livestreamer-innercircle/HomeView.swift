@@ -17,15 +17,19 @@ struct HomeView: View {
         NavigationStack {
             List {
                 ForEach(livestreams, id: \.self) { video in
-                    VStack(alignment: .leading) {
-                        RoundedRectangle(cornerRadius: 12)
-                            .frame(width: .infinity, height: 300)
-                        
-                        Text(video)
-                            .font(.title)
+                    NavigationLink(value: video) {
+                        VStack(alignment: .leading) {
+                            RoundedRectangle(cornerRadius: 12)
+                                .frame(width: .infinity, height: 300)
+                            
+                            Text(video)
+                                .font(.title)
+                        }
                     }
-                    
                 }
+            }
+            .navigationDestination(for: String.self) { video in
+                LivestreamView()
             }
             .listStyle(.plain)
             .toolbar {
