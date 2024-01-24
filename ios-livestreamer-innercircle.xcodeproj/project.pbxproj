@@ -11,6 +11,9 @@
 		4AEA251C2B27B374009C8EA4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA251B2B27B374009C8EA4 /* HomeView.swift */; };
 		4AEA251E2B27B376009C8EA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AEA251D2B27B376009C8EA4 /* Assets.xcassets */; };
 		4AEA25212B27B376009C8EA4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AEA25202B27B376009C8EA4 /* Preview Assets.xcassets */; };
+		FF9490DE2B6186E20062374E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF9490DD2B6186E20062374E /* GoogleService-Info.plist */; };
+		FF9490ED2B6187A30062374E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FF9490EC2B6187A30062374E /* FirebaseAuth */; };
+		FF9490FD2B6187A30062374E /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FF9490FC2B6187A30062374E /* FirebaseFirestoreSwift */; };
 		FFD130BA2B34EBCF003A732F /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD130B92B34EBCF003A732F /* AuthenticationView.swift */; };
 		FFD130BC2B34F09D003A732F /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD130BB2B34F09D003A732F /* PaywallView.swift */; };
 		FFD130BE2B34F1FC003A732F /* LivestreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD130BD2B34F1FC003A732F /* LivestreamView.swift */; };
@@ -25,6 +28,7 @@
 		4AEA251B2B27B374009C8EA4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4AEA251D2B27B376009C8EA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AEA25202B27B376009C8EA4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FF9490DD2B6186E20062374E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FFD130B92B34EBCF003A732F /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		FFD130BB2B34F09D003A732F /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
 		FFD130BD2B34F1FC003A732F /* LivestreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivestreamView.swift; sourceTree = "<group>"; };
@@ -37,7 +41,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFF664012B59C2DF00C66B1F /* StreamVideoSwiftUI in Frameworks */,
+				FF9490FD2B6187A30062374E /* FirebaseFirestoreSwift in Frameworks */,
 				FFF663FF2B59C2DF00C66B1F /* StreamVideo in Frameworks */,
+				FF9490ED2B6187A30062374E /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +75,7 @@
 				FFD130BF2B34F631003A732F /* ProfileView.swift */,
 				FFD130BB2B34F09D003A732F /* PaywallView.swift */,
 				FFD130BD2B34F1FC003A732F /* LivestreamView.swift */,
+				FF9490DD2B6186E20062374E /* GoogleService-Info.plist */,
 				4AEA251D2B27B376009C8EA4 /* Assets.xcassets */,
 				4AEA251F2B27B376009C8EA4 /* Preview Content */,
 			);
@@ -102,6 +109,8 @@
 			packageProductDependencies = (
 				FFF663FE2B59C2DF00C66B1F /* StreamVideo */,
 				FFF664002B59C2DF00C66B1F /* StreamVideoSwiftUI */,
+				FF9490EC2B6187A30062374E /* FirebaseAuth */,
+				FF9490FC2B6187A30062374E /* FirebaseFirestoreSwift */,
 			);
 			productName = "ios-livestreamer-innercircle";
 			productReference = 4AEA25162B27B374009C8EA4 /* ios-livestreamer-innercircle.app */;
@@ -133,6 +142,7 @@
 			mainGroup = 4AEA250D2B27B374009C8EA4;
 			packageReferences = (
 				FFF663FD2B59C2DF00C66B1F /* XCRemoteSwiftPackageReference "stream-video-swift" */,
+				FF9490DF2B6187A20062374E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 4AEA25172B27B374009C8EA4 /* Products */;
 			projectDirPath = "";
@@ -150,6 +160,7 @@
 			files = (
 				4AEA25212B27B376009C8EA4 /* Preview Assets.xcassets in Resources */,
 				4AEA251E2B27B376009C8EA4 /* Assets.xcassets in Resources */,
+				FF9490DE2B6186E20062374E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +386,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		FF9490DF2B6187A20062374E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.20.0;
+			};
+		};
 		FFF663FD2B59C2DF00C66B1F /* XCRemoteSwiftPackageReference "stream-video-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/GetStream/stream-video-swift";
@@ -386,6 +405,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		FF9490EC2B6187A30062374E /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FF9490DF2B6187A20062374E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		FF9490FC2B6187A30062374E /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FF9490DF2B6187A20062374E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
 		FFF663FE2B59C2DF00C66B1F /* StreamVideo */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FFF663FD2B59C2DF00C66B1F /* XCRemoteSwiftPackageReference "stream-video-swift" */;
