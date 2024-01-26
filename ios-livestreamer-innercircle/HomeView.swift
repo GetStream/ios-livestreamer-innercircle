@@ -9,6 +9,8 @@ import SwiftUI
 
 struct HomeView: View {
     
+    @Environment(AuthenticationViewModel.self) var authenticationViewModel
+    
     @State private var isPresentingProfileView = false
     
     private let livestreams = ["video 1", "video 2", "video 3"]
@@ -19,9 +21,6 @@ struct HomeView: View {
                 ForEach(livestreams, id: \.self) { video in
                     NavigationLink(value: video) {
                         VStack(alignment: .leading) {
-                            RoundedRectangle(cornerRadius: 12)
-                                .frame(width: .infinity, height: 300)
-                            
                             Text(video)
                                 .font(.title)
                         }
@@ -43,6 +42,7 @@ struct HomeView: View {
             }
             .sheet(isPresented: $isPresentingProfileView) {
                 ProfileView()
+                    .environment(authenticationViewModel)
             }
         }
     }

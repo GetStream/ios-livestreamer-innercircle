@@ -14,6 +14,10 @@
 		FF9490DE2B6186E20062374E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF9490DD2B6186E20062374E /* GoogleService-Info.plist */; };
 		FF9490ED2B6187A30062374E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FF9490EC2B6187A30062374E /* FirebaseAuth */; };
 		FF9490FD2B6187A30062374E /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FF9490FC2B6187A30062374E /* FirebaseFirestoreSwift */; };
+		FF9491172B61B07E0062374E /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9491162B61B07E0062374E /* AuthenticationViewModel.swift */; };
+		FF9491192B622FD10062374E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9491182B622FD10062374E /* ContentView.swift */; };
+		FF94911B2B636A550062374E /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF94911A2B636A550062374E /* LogInView.swift */; };
+		FF94911D2B636A5F0062374E /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF94911C2B636A5F0062374E /* SignUpView.swift */; };
 		FFD130BA2B34EBCF003A732F /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD130B92B34EBCF003A732F /* AuthenticationView.swift */; };
 		FFD130BC2B34F09D003A732F /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD130BB2B34F09D003A732F /* PaywallView.swift */; };
 		FFD130BE2B34F1FC003A732F /* LivestreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD130BD2B34F1FC003A732F /* LivestreamView.swift */; };
@@ -29,6 +33,10 @@
 		4AEA251D2B27B376009C8EA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AEA25202B27B376009C8EA4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FF9490DD2B6186E20062374E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FF9491162B61B07E0062374E /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		FF9491182B622FD10062374E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FF94911A2B636A550062374E /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		FF94911C2B636A5F0062374E /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		FFD130B92B34EBCF003A732F /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		FFD130BB2B34F09D003A732F /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
 		FFD130BD2B34F1FC003A732F /* LivestreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivestreamView.swift; sourceTree = "<group>"; };
@@ -70,8 +78,12 @@
 			isa = PBXGroup;
 			children = (
 				4AEA25192B27B374009C8EA4 /* ios_livestreamer_innercircleApp.swift */,
+				FF9491182B622FD10062374E /* ContentView.swift */,
 				4AEA251B2B27B374009C8EA4 /* HomeView.swift */,
 				FFD130B92B34EBCF003A732F /* AuthenticationView.swift */,
+				FF9491162B61B07E0062374E /* AuthenticationViewModel.swift */,
+				FF94911A2B636A550062374E /* LogInView.swift */,
+				FF94911C2B636A5F0062374E /* SignUpView.swift */,
 				FFD130BF2B34F631003A732F /* ProfileView.swift */,
 				FFD130BB2B34F09D003A732F /* PaywallView.swift */,
 				FFD130BD2B34F1FC003A732F /* LivestreamView.swift */,
@@ -173,8 +185,12 @@
 			files = (
 				4AEA251C2B27B374009C8EA4 /* HomeView.swift in Sources */,
 				FFD130BE2B34F1FC003A732F /* LivestreamView.swift in Sources */,
+				FF9491192B622FD10062374E /* ContentView.swift in Sources */,
 				FFD130BC2B34F09D003A732F /* PaywallView.swift in Sources */,
+				FF9491172B61B07E0062374E /* AuthenticationViewModel.swift in Sources */,
 				4AEA251A2B27B374009C8EA4 /* ios_livestreamer_innercircleApp.swift in Sources */,
+				FF94911D2B636A5F0062374E /* SignUpView.swift in Sources */,
+				FF94911B2B636A550062374E /* LogInView.swift in Sources */,
 				FFD130C02B34F631003A732F /* ProfileView.swift in Sources */,
 				FFD130BA2B34EBCF003A732F /* AuthenticationView.swift in Sources */,
 			);

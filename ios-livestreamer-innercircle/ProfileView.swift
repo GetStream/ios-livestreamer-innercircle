@@ -9,17 +9,17 @@ import SwiftUI
 
 struct ProfileView: View {
     
-    @State private var email = ""
+    @Environment(AuthenticationViewModel.self) var authenticationViewModel
     
     var body: some View {
         NavigationStack {
             ScrollView {
                 
                 VStack(spacing: 16) {
-                    Text("Email: \(email)")
+                    Text("Email: \(authenticationViewModel.user?.email ?? "No email")")
                     
                     Button {
-                        
+                        authenticationViewModel.signOut()
                     } label: {
                         Text("Sign Out")
                             .padding(.vertical, 8)
