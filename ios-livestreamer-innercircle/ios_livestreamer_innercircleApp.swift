@@ -8,6 +8,7 @@
 import SwiftUI
 import FirebaseAuth
 import FirebaseCore
+import RevenueCat
 
 @main
 struct ios_livestreamer_innercircleApp: App {
@@ -26,8 +27,10 @@ struct ios_livestreamer_innercircleApp: App {
 final class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        FirebaseApp.configure()
         
+        FirebaseApp.configure()
+        Purchases.logLevel = .debug
+        Purchases.configure(withAPIKey: "", appUserID: nil)
         return true
     }
 }

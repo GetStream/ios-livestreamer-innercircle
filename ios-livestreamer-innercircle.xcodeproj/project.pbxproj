@@ -18,6 +18,8 @@
 		FF9491192B622FD10062374E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9491182B622FD10062374E /* ContentView.swift */; };
 		FF94911B2B636A550062374E /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF94911A2B636A550062374E /* LogInView.swift */; };
 		FF94911D2B636A5F0062374E /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF94911C2B636A5F0062374E /* SignUpView.swift */; };
+		FF9491252B6391930062374E /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = FF9491242B6391930062374E /* RevenueCat */; };
+		FF9491272B6391930062374E /* RevenueCatUI in Frameworks */ = {isa = PBXBuildFile; productRef = FF9491262B6391930062374E /* RevenueCatUI */; };
 		FFD130BA2B34EBCF003A732F /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD130B92B34EBCF003A732F /* AuthenticationView.swift */; };
 		FFD130BC2B34F09D003A732F /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD130BB2B34F09D003A732F /* PaywallView.swift */; };
 		FFD130BE2B34F1FC003A732F /* LivestreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD130BD2B34F1FC003A732F /* LivestreamView.swift */; };
@@ -50,6 +52,8 @@
 			files = (
 				FFF664012B59C2DF00C66B1F /* StreamVideoSwiftUI in Frameworks */,
 				FF9490FD2B6187A30062374E /* FirebaseFirestoreSwift in Frameworks */,
+				FF9491272B6391930062374E /* RevenueCatUI in Frameworks */,
+				FF9491252B6391930062374E /* RevenueCat in Frameworks */,
 				FFF663FF2B59C2DF00C66B1F /* StreamVideo in Frameworks */,
 				FF9490ED2B6187A30062374E /* FirebaseAuth in Frameworks */,
 			);
@@ -163,6 +167,8 @@
 				FFF664002B59C2DF00C66B1F /* StreamVideoSwiftUI */,
 				FF9490EC2B6187A30062374E /* FirebaseAuth */,
 				FF9490FC2B6187A30062374E /* FirebaseFirestoreSwift */,
+				FF9491242B6391930062374E /* RevenueCat */,
+				FF9491262B6391930062374E /* RevenueCatUI */,
 			);
 			productName = "ios-livestreamer-innercircle";
 			productReference = 4AEA25162B27B374009C8EA4 /* ios-livestreamer-innercircle.app */;
@@ -195,6 +201,7 @@
 			packageReferences = (
 				FFF663FD2B59C2DF00C66B1F /* XCRemoteSwiftPackageReference "stream-video-swift" */,
 				FF9490DF2B6187A20062374E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				FF9491232B6391930062374E /* XCRemoteSwiftPackageReference "purchases-ios" */,
 			);
 			productRefGroup = 4AEA25172B27B374009C8EA4 /* Products */;
 			projectDirPath = "";
@@ -452,6 +459,14 @@
 				minimumVersion = 10.20.0;
 			};
 		};
+		FF9491232B6391930062374E /* XCRemoteSwiftPackageReference "purchases-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RevenueCat/purchases-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.32.2;
+			};
+		};
 		FFF663FD2B59C2DF00C66B1F /* XCRemoteSwiftPackageReference "stream-video-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/GetStream/stream-video-swift";
@@ -472,6 +487,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FF9490DF2B6187A20062374E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
+		};
+		FF9491242B6391930062374E /* RevenueCat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FF9491232B6391930062374E /* XCRemoteSwiftPackageReference "purchases-ios" */;
+			productName = RevenueCat;
+		};
+		FF9491262B6391930062374E /* RevenueCatUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FF9491232B6391930062374E /* XCRemoteSwiftPackageReference "purchases-ios" */;
+			productName = RevenueCatUI;
 		};
 		FFF663FE2B59C2DF00C66B1F /* StreamVideo */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FirebaseAuth
+import RevenueCat
 
 
 enum AuthenticationState {
@@ -65,7 +66,9 @@ enum AuthenticationFlow {
     func signInWithEmailPassword() async {
         authenticationState = .authenticating
         do {
-            try await Auth.auth().signIn(withEmail: email, password: password)
+            let authResult = try await Auth.auth().signIn(withEmail: email, password: password)
+            Purchases.shared.logIn(authResult.user.uid) { _, created, _ in
+            }
             authenticationState = .authenticated
         } catch  {
             print(error)
@@ -76,7 +79,9 @@ enum AuthenticationFlow {
     func signUpWithEmailPassword() async {
         authenticationState = .authenticating
         do {
-            try await Auth.auth().createUser(withEmail: email, password: password)
+            let authResult = try await Auth.auth().createUser(withEmail: email, password: password)
+            Purchases.shared.logIn(authResult.user.uid) { _, created, _ in
+            }
             authenticationState = .authenticated
         } catch {
             print(error)
@@ -87,17 +92,20 @@ enum AuthenticationFlow {
     func signOut() {
         do {
             try Auth.auth().signOut()
+            Task {
+                try await Purchases.shared.logOut()
+            }
         } catch {
             print(error)
         }
     }
     
-    func deleteAccount() async -> Bool {
+    func deleteAccount() async {
         do {
             try await user?.delete()
-            return true
+            _ = try await Purchases.shared.logOut()
         } catch {
-            return false
+            print(error)
         }
     }
 }

@@ -109,6 +109,15 @@
       }
     },
     {
+      "identity" : "purchases-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/RevenueCat/purchases-ios.git",
+      "state" : {
+        "revision" : "bcf25013ab04a469e2e6cae7ffed1da5ca3ea6bf",
+        "version" : "4.32.2"
+      }
+    },
+    {
       "identity" : "stream-video-swift",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/GetStream/stream-video-swift",
