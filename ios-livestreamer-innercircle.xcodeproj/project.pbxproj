@@ -78,15 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				4AEA25192B27B374009C8EA4 /* ios_livestreamer_innercircleApp.swift */,
-				FF9491182B622FD10062374E /* ContentView.swift */,
-				4AEA251B2B27B374009C8EA4 /* HomeView.swift */,
-				FFD130B92B34EBCF003A732F /* AuthenticationView.swift */,
-				FF9491162B61B07E0062374E /* AuthenticationViewModel.swift */,
-				FF94911A2B636A550062374E /* LogInView.swift */,
-				FF94911C2B636A5F0062374E /* SignUpView.swift */,
-				FFD130BF2B34F631003A732F /* ProfileView.swift */,
-				FFD130BB2B34F09D003A732F /* PaywallView.swift */,
-				FFD130BD2B34F1FC003A732F /* LivestreamView.swift */,
+				FF94911F2B6388620062374E /* Authentication */,
+				FF94911E2B63885C0062374E /* Home */,
 				FF9490DD2B6186E20062374E /* GoogleService-Info.plist */,
 				4AEA251D2B27B376009C8EA4 /* Assets.xcassets */,
 				4AEA251F2B27B376009C8EA4 /* Preview Content */,
@@ -100,6 +93,53 @@
 				4AEA25202B27B376009C8EA4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FF94911E2B63885C0062374E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FF9491222B6388A70062374E /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FF94911F2B6388620062374E /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				FF9491202B6388860062374E /* Views */,
+				FF9491212B63888A0062374E /* ViewModels */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		FF9491202B6388860062374E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FFD130B92B34EBCF003A732F /* AuthenticationView.swift */,
+				FF94911A2B636A550062374E /* LogInView.swift */,
+				FF94911C2B636A5F0062374E /* SignUpView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FF9491212B63888A0062374E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FF9491162B61B07E0062374E /* AuthenticationViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		FF9491222B6388A70062374E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FF9491182B622FD10062374E /* ContentView.swift */,
+				4AEA251B2B27B374009C8EA4 /* HomeView.swift */,
+				FFD130BF2B34F631003A732F /* ProfileView.swift */,
+				FFD130BB2B34F09D003A732F /* PaywallView.swift */,
+				FFD130BD2B34F1FC003A732F /* LivestreamView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
