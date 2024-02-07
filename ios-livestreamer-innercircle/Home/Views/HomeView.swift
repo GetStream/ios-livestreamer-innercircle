@@ -14,21 +14,9 @@ struct HomeView: View {
     
     @State private var isPresentingProfileView = false
     
-    @State private var streamVideoClient: StreamVideo
+    @State private var streamVideoClient: StreamVideo?
     
     @State private var calls = [Call]()
-    
-    init() {
-//        let userToken = (try? await authenticationViewModel.user?.getIDToken()) ?? ""
-        
-        let streamVideo = StreamVideo(
-            apiKey: "",
-            user: .anonymous,
-            token: .init(rawValue: "userToken")
-        )
-        
-        self.streamVideoClient = streamVideo
-    }
     
     private let livestreams = ["video 1", "video 2", "video 3"]
     
@@ -58,6 +46,7 @@ struct HomeView: View {
                 }
             }
             .task {
+                await setUpStreamVideo()
                 try? await queryLivestreams()
             }
             .sheet(isPresented: $isPresentingProfileView) {
@@ -67,15 +56,31 @@ struct HomeView: View {
         }
     }
     
+    private func setUpStreamVideo() async {
+        guard let user = authenticationViewModel.user,
+              let userToken = try? await authenticationViewModel.user?.getIDToken() else {
+                  return
+              }
+        
+        let streamVideo = StreamVideo(
+            apiKey: "",
+            user: .init(id: user.uid),
+            token: .init(rawValue: userToken)
+        )
+        
+        self.streamVideoClient = streamVideo
+    }
+    
     private func queryLivestreams() async throws {
 //        let filters: [String: RawJSON] = ["ended_at": .nil]
         let filters: [String: RawJSON] = ["type": .dictionary(["$eq": .string("livestream")])]
         let sort = [SortParamRequest.descending("created_at")]
         let limit = 10
         
-        let (firstPageCalls, secondPageCursor) = try await streamVideoClient.queryCalls(filters: filters, sort: sort, limit: limit)
-        
-        self.calls = firstPageCalls
+        if let streamVideoClient {
+            let (firstPageCalls, secondPageCursor) = try await streamVideoClient.queryCalls(filters: filters, sort: sort, limit: limit)
+            self.calls = firstPageCalls
+        }
     }
 }
 
