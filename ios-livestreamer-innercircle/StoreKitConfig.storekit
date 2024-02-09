@@ -1,0 +1,104 @@
+{
+  "identifier" : "7BF885E2",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+
+  ],
+  "settings" : {
+    "_applicationInternalID" : "6472640853",
+    "_developerTeamID" : "EHV7XZLAHA",
+    "_failTransactionsEnabled" : false,
+    "_lastSynchronizedDate" : 729188835.24118197,
+    "_locale" : "en_US",
+    "_storefront" : "USA",
+    "_storeKitErrors" : [
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Load Products"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Purchase"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Verification"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Store Sync"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Subscription Status"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Transaction"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Manage Subscriptions Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Refund Request Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Offer Code Redeem Sheet"
+      }
+    ]
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "21445421",
+      "localizations" : [
+
+      ],
+      "name" : "innercircle-member",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "0.99",
+          "familyShareable" : true,
+          "groupNumber" : 1,
+          "internalID" : "6477715519",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "Get access to your favourite streamer.",
+              "displayName" : "Inner Circle Gold",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "innercircle_member_gold",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Gold Membership",
+          "subscriptionGroupID" : "21445421",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}
