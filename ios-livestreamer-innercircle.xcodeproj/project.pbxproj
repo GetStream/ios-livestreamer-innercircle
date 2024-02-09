@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A1217D52B76898F00A1951C /* StoreKitConfig.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 4A1217D42B76898F00A1951C /* StoreKitConfig.storekit */; };
 		4AEA251A2B27B374009C8EA4 /* ios_livestreamer_innercircleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA25192B27B374009C8EA4 /* ios_livestreamer_innercircleApp.swift */; };
 		4AEA251C2B27B374009C8EA4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEA251B2B27B374009C8EA4 /* HomeView.swift */; };
 		4AEA251E2B27B376009C8EA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AEA251D2B27B376009C8EA4 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A1217D42B76898F00A1951C /* StoreKitConfig.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = StoreKitConfig.storekit; sourceTree = "<group>"; };
 		4AEA25162B27B374009C8EA4 /* ios-livestreamer-innercircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-livestreamer-innercircle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AEA25192B27B374009C8EA4 /* ios_livestreamer_innercircleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_livestreamer_innercircleApp.swift; sourceTree = "<group>"; };
 		4AEA251B2B27B374009C8EA4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		4AEA25182B27B374009C8EA4 /* ios-livestreamer-innercircle */ = {
 			isa = PBXGroup;
 			children = (
+				4A1217D42B76898F00A1951C /* StoreKitConfig.storekit */,
 				4AEA25192B27B374009C8EA4 /* ios_livestreamer_innercircleApp.swift */,
 				FF94911F2B6388620062374E /* Authentication */,
 				FF94911E2B63885C0062374E /* Home */,
@@ -218,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AEA25212B27B376009C8EA4 /* Preview Assets.xcassets in Resources */,
+				4A1217D52B76898F00A1951C /* StoreKitConfig.storekit in Resources */,
 				4AEA251E2B27B376009C8EA4 /* Assets.xcassets in Resources */,
 				FF9490DE2B6186E20062374E /* GoogleService-Info.plist in Resources */,
 			);
