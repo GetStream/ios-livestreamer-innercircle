@@ -63,7 +63,7 @@ struct HomeView: View {
               }
         
         let streamVideo = StreamVideo(
-            apiKey: "",
+            apiKey: Secret.streamKey,
             user: .init(id: user.uid),
             token: .init(rawValue: userToken)
         )
@@ -78,7 +78,7 @@ struct HomeView: View {
         let limit = 10
         
         if let streamVideoClient {
-            let (firstPageCalls, secondPageCursor) = try await streamVideoClient.queryCalls(filters: filters, sort: sort, limit: limit)
+            let (firstPageCalls, secondPageCursor) = try await streamVideoClient.queryCalls(filters: nil, sort: sort, limit: limit)
             self.calls = firstPageCalls
         }
     }

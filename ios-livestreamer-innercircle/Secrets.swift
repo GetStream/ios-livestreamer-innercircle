@@ -9,4 +9,5 @@ import Foundation
 
 enum Secret {
     static let rcAPIKey = ""
+    static let streamKey = ""
 }
