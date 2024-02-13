@@ -78,8 +78,12 @@ struct HomeView: View {
         let limit = 10
         
         if let streamVideoClient {
-            let (firstPageCalls, secondPageCursor) = try await streamVideoClient.queryCalls(filters: nil, sort: sort, limit: limit)
-            self.calls = firstPageCalls
+            do {
+                let (firstPageCalls, secondPageCursor) = try await streamVideoClient.queryCalls(filters: nil, sort: sort, limit: limit)
+                self.calls = firstPageCalls
+            } catch {
+                print("❌ Error \(error) DESCRIPTION: \(error.localizedDescription)")
+            }
         }
     }
 }
