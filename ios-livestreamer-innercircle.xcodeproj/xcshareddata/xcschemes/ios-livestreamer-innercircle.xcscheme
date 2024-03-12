@@ -49,6 +49,9 @@
             ReferencedContainer = "container:ios-livestreamer-innercircle.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <StoreKitConfigurationFileReference
+         identifier = "../../ios-livestreamer-innercircle/StoreKitConfig.storekit">
+      </StoreKitConfigurationFileReference>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
