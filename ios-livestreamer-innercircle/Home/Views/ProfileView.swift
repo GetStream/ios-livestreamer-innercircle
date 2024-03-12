@@ -16,7 +16,7 @@ struct ProfileView: View {
             ScrollView {
                 
                 VStack(spacing: 16) {
-                    Text("Email: \(authenticationViewModel.user?.email ?? "No email")")
+                    Text("Name: \(authenticationViewModel.user?.name ?? "No email")")
                     
                     Button {
                         authenticationViewModel.signOut()

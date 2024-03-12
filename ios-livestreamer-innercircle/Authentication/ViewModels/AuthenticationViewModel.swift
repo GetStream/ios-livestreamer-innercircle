@@ -40,20 +40,20 @@ enum AuthenticationFlow {
     
     private var authStateHandler: AuthStateDidChangeListenerHandle?
     
-    var user: User?
+    var user: UserCredentials?
     
     init() {
-        registerAuthStateHandler()
+//        registerAuthStateHandler()
     }
     
-    func registerAuthStateHandler() {
-        if authStateHandler == nil {
-            authStateHandler = Auth.auth().addStateDidChangeListener { _, user in
-                self.user = user
-                self.authenticationState = user == nil ? .unauthenticated : .authenticated
-            }
-        }
-    }
+//    func registerAuthStateHandler() {
+//        if authStateHandler == nil {
+//            authStateHandler = Auth.auth().addStateDidChangeListener { _, user in
+//                self.user = user
+//                self.authenticationState = user == nil ? .unauthenticated : .authenticated
+//            }
+//        }
+//    }
     
     func switchFlow() {
         flow = flow == .logIn ? .signUp : .logIn
@@ -101,11 +101,11 @@ enum AuthenticationFlow {
     }
     
     func deleteAccount() async {
-        do {
-            try await user?.delete()
-            _ = try await Purchases.shared.logOut()
-        } catch {
-            print(error)
-        }
+//        do {
+//            try await user?.delete()
+//            _ = try await Purchases.shared.logOut()
+//        } catch {
+//            print(error)
+//        }
     }
 }

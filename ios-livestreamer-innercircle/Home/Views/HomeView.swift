@@ -58,13 +58,13 @@ struct HomeView: View {
     
     private func setUpStreamVideo() async {
         guard let user = authenticationViewModel.user,
-              let userToken = try? await authenticationViewModel.user?.getIDToken() else {
+              let userToken = authenticationViewModel.user?.id else {
                   return
               }
         
         let streamVideo = StreamVideo(
             apiKey: Secret.streamKey,
-            user: .init(id: user.uid),
+            user: .init(id: user.id),
             token: .init(rawValue: userToken)
         )
         
